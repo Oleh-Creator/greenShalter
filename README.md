@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,6 +21,10 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
     />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css" rel="stylesheet"/>
 </head>
 <body>
     <div class="wrap">
@@ -321,52 +325,79 @@
             </div>
 <div class="PayCardboxInfo">
     <div class="payCardInp">
-        <div class="payCardInpBox">
+        <div class="payCardInpBox" id="payCardInpBox">
             <p>Номеор карточки</p>
-            <input type="number"  placeholder="" name="" id="">
+            <input type="number" class="CardNumInp" >
         </div>
         <br>
          <div class="payCardInpBox">
-            <div class="cardInputsBox">
-                <div class="inp1Box">
-                    <p>MM</p>
-            <input type="number"  placeholder="" name="" id="">
-        </div>
-        <div class="inp2Box">
+            <div class="payCardLog">
+            <p>MM</p>
             <p>PP</p>
-    <input type="number"  placeholder="" name="" id="">
-</div>
+        </div>
+            <div class="cardInputsBox">
+                <div class="inpBox">
+                    <input type="number" class="CardInp" id="CardInp1" step="0.01">
+                    <input type="number" class="CardInp" id="CardInp2" step="0.01">
+                </div>
             </div>
         </div>
         <br>
         <div class="payCardInpBox">
             <p>CVV</p>
-            <input type="number"  placeholder="" name="" id="">
+            <input type="number" >
         </div>
         <br>
+        <div class="payInputsBox">
+            <div class="payInpLog">
+                <p>До сплати</p>
+                
+                <div class="payInputBox">
+<input type="number" id="payInp1">
+<section>
+    <option value="USD">грн</option>
+</section>
+                </div>
+            </div>
+        </div>
        
     </div>
 
     <div class="payCardImgBox">
-        <div class="payCaardOval1"></div>
-<div class="dogCardImg">
-    <div class="CardDogHeader">
-        <div class="MasterBlock">
-   <img src="./img/MasterLogo.png" alt="">
-   <p>Mastercard</p>
-</div>
-<svg width="38" height="42" viewBox="0 0 38 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M9.8916 28.3088L9.90439 28.3207" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M9.89172 21.2539C11.9003 21.2542 13.8266 21.9976 15.2468 23.3206C16.6671 24.6436 17.4652 26.4379 17.4655 28.3089" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M9.89342 14.1963C11.883 14.1963 13.8531 14.5613 15.6912 15.2705C17.5294 15.9797 19.1995 17.0192 20.6064 18.3296C22.0132 19.6401 23.1292 21.1959 23.8905 22.9081C24.6519 24.6203 25.0437 26.4555 25.0436 28.3087" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M9.89343 7.14131C22.4445 7.14006 32.6187 16.6174 32.6576 28.3461" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-    
+        <div class="cardBox">
+        <div class="cardOval1"></div>
+        <div class="cardImgBox">
+           <div class="cardHeader">
+            <div class="headerLogo">
+            <img src="./img/MasterLogo.png" alt="" class="MasterLogo">
+            <p>Mastercard</p>
+        </div>
+        <svg width="38" height="42" viewBox="0 0 38 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9.8916 28.3088L9.90439 28.3207" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M9.89172 21.2539C11.9003 21.2542 13.8266 21.9976 15.2468 23.3206C16.6671 24.6436 17.4652 26.4379 17.4655 28.3089" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M9.89342 14.1963C11.883 14.1963 13.8531 14.5613 15.6912 15.2705C17.5294 15.9797 19.1995 17.0192 20.6064 18.3296C22.0132 19.6401 23.1292 21.1959 23.8905 22.9081C24.6519 24.6203 25.0437 26.4555 25.0436 28.3087" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M9.89343 7.14131C22.4445 7.14006 32.6187 16.6174 32.6576 28.3461" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            
+           </div>
+           <div class="cardImgNumberBox">
+           
+           </div>
+           <div class="cardCvvBox">
+            <div class="dateBox">
+                <p class="boxMM">MM/PP</p>
+                <p>05/2025</p>
+            </div>
+            <div class="cvvBox">
+                <p class="boxMM">CVV</p>
+                <p>655</p>
+            </div>
+           </div>
+        </div>
+        <div class="cardOval2"></div>
     </div>
-<img src="./img/Card Dog.png" alt="">
-<div class="downCardSide"></div>
-</div>
-<div class="payCaardOval2"></div>
+        
+<br>
 <button class="cardBut CardDogBut">Зробити внесок</button>
     </div>
 </div>
@@ -425,7 +456,7 @@
                 <button>Знайти друга <i class="fa-sharp fa-regular fa-heart"></i></button>
                 </div>
                 <div class="rightSide">
-                    <img src="./img/home dog.png" alt="dogs">
+                    <img src="./img/homedog.png" alt="dogs">
                 </div>
               </div>
               <div class="swiper-slide">
@@ -435,7 +466,7 @@
                 <button>Знайти друга <i class="fa-sharp fa-regular fa-heart"></i></button>
                 </div>
                 <div class="rightSide">
-                    <img src="./img/home dog2.png" alt="dogs" class="slideDog2">
+                    <img src="./img/homedog2.png" alt="dogs" class="slideDog2">
                 </div>
                 
               </div>
@@ -446,7 +477,7 @@
 </div>
     <div class="about">
         <div class="infBox" id="infBox">
-<img src="./img/infBox .png" alt="">
+<img src="./img/infBox.png" alt="">
 <br>
 <div class="ingText">
     <h2 class="ingLog1">Green house</h2>
@@ -465,7 +496,7 @@
                 <h3 class="wavesLogo1">Окрім </h3>
                 <h3> донату для будівництва, ми потребуємо</h3>
             </div>
-            <div class="wavesItemsBox" id="wavesItemsBox">
+            <div class="wavesItemsBox">
                <div class="WavesItem">
             <img src="./img/bowls.png" alt="">
             <br>
@@ -485,7 +516,7 @@
                        </div>
             </div>
 
-            <div class="wavesItemsBox" id="wavesItemsBox">
+            <div class="wavesItemsBox" >
                 <div class="WavesItem">
              <img src="./img/jar.png" alt="">
              <br>
@@ -493,7 +524,7 @@
                 </div>
  
                 <div class="WavesItem">
-                 <img src="./img/volonter log.png" alt="">
+                 <img src="./img/volonterlog.png" alt="">
                  <br>
                      <p>Волонтери для догляду за собаками</p>
                     </div>
@@ -566,6 +597,70 @@
 </div>
     </div>
 
+    <div class="teamBox">
+        <div class="teamBoxHeader">
+            <div class="teamLogo">
+                <h3 class="teamLogItem">Наша</h3>
+                <h3>Команда</h3>
+            </div>
+            <div class="teamInfBox">
+                <p>Наша команда це група інтузіастів та людей які хочуть пренести трішки тепла в наш світ, в Green Shelter працюють тілки експерти та вони знають як і що правильно робити. а найголовніше всі вони з добрим піклуючим сердцем.</p>
+            </div>
+        </div>
+        <div class="teamSlider">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="teamSwiper-slide tSl1"></div>
+                   <div class="teamSwiper-slide tSl2"></div>
+                   <div class="teamSwiper-slide tSl3"></div>
+                   <div class="teamSwiper-slide tSl4"></div>
+                   <div class="teamSwiper-slide tSl5"></div>
+                </div>
+              </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footerInf">
+            <div class="footerLocBox">
+                <h2>Скажи привіт</h2>
+                <br>
+                <div class="footerItem">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="20" cy="20" r="20" fill="#4A9B8D"/>
+                        <path d="M20.5 15.0415C20.3374 15.0142 20.1704 15 20 15C18.3431 15 17 16.3431 17 18C17 19.6569 18.3431 21 20 21C21.6569 21 23 19.6569 23 18C23 17.8296 22.9858 17.6626 22.9585 17.5" stroke="#313340" stroke-width="1.5" stroke-linecap="round"/>
+                        <path d="M13 23.2161C12.3525 21.5622 12 19.8013 12 18.1433C12 13.6459 15.5817 10 20 10C24.4183 10 28 13.6459 28 18.1433C28 22.6055 25.4467 27.8124 21.4629 29.6744C20.5343 30.1085 19.4657 30.1085 18.5371 29.6744C17.2647 29.0797 16.1383 28.1439 15.1944 27" stroke="#313340" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                        <p>м. Яворів Львівська область</p>                        
+                </div>
+                <div class="footerItem">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="20" cy="20" r="20" fill="#4A9B8D"/>
+                        <path d="M30 20C30 23.7712 30 25.6569 28.8284 26.8284C27.6569 28 25.7712 28 22 28H18C14.2288 28 12.3431 28 11.1716 26.8284C10 25.6569 10 23.7712 10 20C10 16.2288 10 14.3431 11.1716 13.1716C12.3431 12 14.2288 12 18 12H22C25.7712 12 27.6569 12 28.8284 13.1716C29.4816 13.8248 29.7706 14.6999 29.8985 16" stroke="#313340" stroke-width="1.5" stroke-linecap="round"/>
+                        <path d="M26 16L23.8411 17.7991C22.0045 19.3296 21.0861 20.0949 20 20.0949C19.3507 20.0949 18.7614 19.8214 18 19.2744M14 16L14.9 16.75L15.8 17.5" stroke="#313340" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                        
+                        <p>greenhousedogsshelter@gmail.com</p>                        
+                </div>
+            </div>
+            <div class="footerMapBox">
+                <h2>Наша локація</h2>
+                <iframe class="footerMap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1957.3809018398513!2d23.38805983369025!3d49.94580960135276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473b15697f948e25%3A0x302cde27d0b17f7c!2z0J_Rg9C90LrRgiDQndC10LfQu9Cw0LzQvdC-0YHRgtGW!5e1!3m2!1suk!2sua!4v1680779769912!5m2!1suk!2sua" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        <hr>
+        <div class="footerentBox">
+            <h4>© Green Shelter 2023</h4>
+            <div class="soshial">
+                <div class="instBox">
+                    <i class="fa-brands fa-instagram"></i>
+
+            </div>
+        
+                    <i class="fa-brands fa-telegram telegram" ></i>
+            </div>
+        </div>
+    </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script src="main.js"></script>
